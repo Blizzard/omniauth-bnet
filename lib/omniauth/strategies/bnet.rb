@@ -41,8 +41,7 @@ module OmniAuth
       uid { raw_info['id'].to_s }
 
       info do
-        { :id => raw_info["id"],
-          :battletag => raw_info["battletag"] }
+        raw_info
       end
 
       def raw_info
@@ -50,13 +49,7 @@ module OmniAuth
 
         access_token.options[:mode] = :query
 
-        id = access_token.get('account/user/id').parsed['id']
-        battletag = access_token.get('account/user/battletag').parsed['battletag']
-
-        @raw_info = {
-          'id' => id,
-          'battletag' => battletag
-        }
+        @raw_info = access_token.get('account/user').parsed
       end
 
       private
