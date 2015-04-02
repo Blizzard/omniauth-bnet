@@ -3,7 +3,7 @@ GEM
   specs:
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    hashie (3.2.0)
+    hashie (3.3.1)
     httplog (0.2.7)
     jwt (1.0.0)
     multi_json (1.10.1)
@@ -18,7 +18,7 @@ GEM
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
-    omniauth-bnet (1.0.0)
+    omniauth-bnet (1.1.0)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
     omniauth-github (1.1.2)

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # This example provides login links for github and bnet in order to test that
 # bnet oauth is correctly working.
 
