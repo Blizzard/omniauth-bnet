@@ -4,7 +4,7 @@ require 'base64'
 module OmniAuth
   module Strategies
     class Bnet < OmniAuth::Strategies::OAuth2
-      option :region, :us
+      option :region, 'us'
       option :client_options, {
         :scope => 'wow.profile sc2.profile'
       }
