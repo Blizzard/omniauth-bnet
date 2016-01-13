@@ -40,7 +40,7 @@ end
 
 get '/' do
   if current_user
-    erb '<h1>Sinatra OAuth Test</h1><%=current_user%><br><pre><%=h current_user_info%></pre><br><a href="/logout">Logout</a>'
+    erb '<h1>Sinatra OAuth Test</h1><%=current_user%><br><pre><%=h current_user_info%></pre><br><pre><%=h session[:debug]%></pre><br><a href="/logout">Logout</a>'
   else
     erb '<h1>Sinatra OAuth Test</h1><a href="/auth/github">Login with Github</a><br><a href="/auth/bnet">Login with Bnet</a>'
   end
@@ -50,6 +50,7 @@ get '/auth/:name/callback' do
   auth = request.env["omniauth.auth"]
   session[:user_id] = auth["uid"]
   session[:user_info] = auth["info"]
+  session[:debug] = auth.to_yaml
   redirect OmniAuth.config.full_host
 end
 
