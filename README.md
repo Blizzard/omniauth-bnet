@@ -5,7 +5,7 @@ Version](https://badge.fury.io/rb/omniauth-bnet.svg)](http://badge.fury.io/rb/om
 
 This is an OmniAuth strategy for authenticating to Blizzard's Battle.net OAuth
 service. In order to use it you need to register an application at the
-[Battle.net Developer Portal](https://dev.battle.net)
+[Battle.net Developer Portal](https://develop.battle.net/)
 
 ## Installation
 
