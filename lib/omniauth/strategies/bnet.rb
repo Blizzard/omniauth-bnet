@@ -18,7 +18,7 @@ module OmniAuth
           options.client_options[:token_url] = "https://#{getHost(options.region)}/oauth/token"
         end
         if !options.client_options.has_key(:site)
-          options.client_options[:site] = "https://#{getMasheryHost(options.region)}/"
+          options.client_options[:site] = "https://#{getHost(options.region)}/"
         end
 
         super
@@ -49,7 +49,7 @@ module OmniAuth
 
         access_token.options[:mode] = :query
 
-        @raw_info = access_token.get('account/user').parsed
+        @raw_info = access_token.get('oauth/userinfo').parsed
       end
 
       private
@@ -64,15 +64,6 @@ module OmniAuth
           "www.battlenet.com.cn"
         else
           "#{region}.battle.net"
-        end
-      end
-
-      def getMasheryHost(region)
-        case region
-        when "cn"
-          "api.battlenet.com.cn"
-        else
-          "#{region}.api.battle.net"
         end
       end
     end

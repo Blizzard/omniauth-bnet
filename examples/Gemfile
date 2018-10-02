@@ -2,5 +2,5 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'omniauth-github'
-gem 'omniauth-bnet'
+gem 'omniauth-bnet', :path => "../"
 gem 'httplog'

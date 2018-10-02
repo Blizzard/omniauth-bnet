@@ -18,7 +18,7 @@ configure do
     provider :bnet, ENV['BNET_ID'], ENV['BNET_SECRET'], scope: "wow.profile sc2.profile"
   end
 
-  OmniAuth.config.full_host = "https://local.test.battle.net"
+  OmniAuth.config.full_host = "https://localhost"
 
   enable :sessions
   enable :inline_templates
