@@ -1,0 +1,12 @@
+%h1 Sinatra OAuth Test
+
+- if current_user
+  %p= current_user
+  %pre=h current_user_info
+  %pre=h session[:debug]
+  %a{ href: '/logout'} Logout
+- else
+  %form{ method: :post }
+    %input{ type: :hidden, name: :authenticity_token, value: "#{request.env['rack.session']['csrf']}" }
+    %button.btn.btn-primary{ formaction: '/auth/github' } Login with Github
+    %button.btn.btn-primary{ formaction: '/auth/bnet' } Login with Bnet

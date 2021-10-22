@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'omniauth-github'
-gem 'omniauth-bnet', :path => "../"
+ruby '2.7.2'
+gem 'dotenv'
+gem 'haml'
 gem 'httplog'
+gem 'omniauth-bnet', path: '../'
+gem 'omniauth-github'
+gem 'sinatra'
