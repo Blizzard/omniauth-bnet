@@ -8,35 +8,50 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    faraday (0.12.2)
-      multipart-post (>= 1.2, < 3)
-    hashie (3.5.7)
-    jwt (1.5.6)
-    multi_json (1.13.1)
-    multi_xml (0.6.0)
-    multipart-post (2.0.0)
-    oauth2 (1.4.0)
-      faraday (>= 0.8, < 0.13)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
+    base64 (0.2.0)
+    bigdecimal (3.1.8)
+    faraday (2.10.0)
+      faraday-net_http (>= 2.0, < 3.2)
+      logger
+    faraday-net_http (3.1.0)
+      net-http
+    hashie (5.0.0)
+    jwt (2.8.2)
+      base64
+    logger (1.6.0)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
+    net-http (0.4.1)
+      uri
+    oauth2 (2.0.9)
+      faraday (>= 0.17.3, < 3.0)
+      jwt (>= 1.0, < 3.0)
       multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
-    omniauth (1.8.1)
-      hashie (>= 3.4.6, < 3.6.0)
+      rack (>= 1.2, < 4)
+      snaky_hash (~> 2.0)
+      version_gem (~> 1.1)
+    omniauth (1.9.2)
+      hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-    omniauth-oauth2 (1.5.0)
-      oauth2 (~> 1.1)
-      omniauth (~> 1.2)
-    rack (2.0.5)
+    omniauth-oauth2 (1.7.3)
+      oauth2 (>= 1.4, < 3)
+      omniauth (>= 1.9, < 3)
+    rack (2.2.9)
     rake (0.9.6)
+    snaky_hash (2.0.1)
+      hashie
+      version_gem (~> 1.1, >= 1.1.1)
+    uri (0.13.0)
+    version_gem (1.1.4)
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 1.6)
+  bundler (~> 2.5)
   omniauth-bnet!
   rake (~> 0)
 
 BUNDLED WITH
-   1.16.4
+   2.5.15
